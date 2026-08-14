@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo MGE Textiles + Uniformes">
+  <title>MGE Textiles + Uniformes | Catálogo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="#inicio" class="brand">
+        <img src="imagenes/logo.jpeg" alt="MGE Textiles + Uniformes">
+      </a>
+
+      <nav class="nav">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <img class="hero-logo" src="imagenes/logo.jpeg" alt="MGE Textiles + Uniformes">
+        <h1>Textiles + Uniformes</h1>
+        <p>Uniformes profesionales y prendas de trabajo.</p>
+        <a class="hero-button" href="#catalogo">Ver catálogo</a>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalogo">
+      <div class="section-heading">
+        <span>CATÁLOGO</span>
+        <h2>Productos destacados</h2>
+        <p>Conoce algunos de nuestros productos y solicita tu cotización directamente por WhatsApp.</p>
+      </div>
+
+      <div class="products">
+
+        <article class="product-card">
+          <div class="product-image">
+            <img src="imagenes/camisa-manga-larga.jpeg" alt="Camisa manga larga despachador">
+          </div>
+          <div class="product-info">
+            <span class="category">Uniforme profesional</span>
+            <h3>Camisa Manga Larga Despachador</h3>
+            <p>Tela gabardina 100% algodón para durabilidad y confort. Bordados según especificaciones oficiales, bolsillos funcionales y diseño profesional.</p>
+            <button class="quote-button" onclick="openWhatsApp('Camisa Manga Larga Despachador')">
+              Cotizar por WhatsApp
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <img src="imagenes/playera-verde.jpeg" alt="Playera verde tipo polo">
+          </div>
+          <div class="product-info">
+            <span class="category">Uniforme profesional</span>
+            <h3>Playera Verde Tipo Polo</h3>
+            <p>Tela piquet de alto rendimiento que ofrece frescura y confort. Bordados según especificaciones, manga larga o corta y lavable en máquina.</p>
+            <button class="quote-button" onclick="openWhatsApp('Playera Verde Tipo Polo')">
+              Cotizar por WhatsApp
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <img src="imagenes/sudadera-gorro.jpeg" alt="Sudadera con gorro">
+          </div>
+          <div class="product-info">
+            <span class="category">Ropa de trabajo</span>
+            <h3>Sudadera con Gorro</h3>
+            <p>Sudadera de felpa con bolsa tipo canguro, interior de gorro forrado, bordados, puños y cintura tejidos para mejor ajuste.</p>
+            <button class="quote-button" onclick="openWhatsApp('Sudadera con Gorro')">
+              Cotizar por WhatsApp
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <img src="imagenes/pantalon-cargo.jpeg" alt="Pantalón tipo cargo">
+          </div>
+          <div class="product-info">
+            <span class="category">Ropa de trabajo</span>
+            <h3>Pantalón Tipo Cargo</h3>
+            <p>Gabardina 100% algodón, cintas reflejantes de alta visibilidad, costuras reforzadas y múltiples bolsas laterales, traseras y de carga.</p>
+            <button class="quote-button" onclick="openWhatsApp('Pantalón Tipo Cargo')">
+              Cotizar por WhatsApp
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="contact-card">
+        <div>
+          <span class="section-label">¿NECESITAS UNA COTIZACIÓN?</span>
+          <h2>Estamos para ayudarte</h2>
+          <p>Contáctanos por WhatsApp para conocer disponibilidad, tallas, cantidades y precios.</p>
+        </div>
+        <button class="main-whatsapp" onclick="showWhatsAppOptions()">
+          <span class="wa-icon">◉</span>
+          Contactar por WhatsApp
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="imagenes/logo.jpeg" alt="MGE" class="footer-logo">
+    <p>MGE Textiles + Uniformes</p>
+    <p class="footer-copy">© <span id="year"></span> Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Botón flotante -->
+  <button class="floating-whatsapp" onclick="showWhatsAppOptions()" aria-label="Contactar por WhatsApp">
+    <span class="floating-icon">☎</span>
+    <span class="floating-text">Cotiza por WhatsApp</span>
+  </button>
+
+  <!-- Ventana de WhatsApp -->
+  <div class="modal" id="whatsappModal" onclick="closeModalOutside(event)">
+    <div class="modal-box">
+      <button class="close-modal" onclick="closeWhatsAppOptions()" aria-label="Cerrar">×</button>
+      <div class="modal-whatsapp-icon">☎</div>
+      <h2>¿Con quién deseas contactar?</h2>
+      <p>Selecciona un número para solicitar información o una cotización.</p>
+
+      <a class="phone-option" href="https://wa.me/522221365686?text=Hola%2C%20vi%20su%20cat%C3%A1logo%20de%20MGE%20Textiles%20%2B%20Uniformes%20y%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">
+        <strong>WhatsApp</strong>
+        <span>222 136 5686</span>
+      </a>
+
+      <a class="phone-option" href="https://wa.me/52221464198?text=Hola%2C%20vi%20su%20cat%C3%A1logo%20de%20MGE%20Textiles%20%2B%20Uniformes%20y%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">
+        <strong>WhatsApp</strong>
+        <span>221 464 198</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
